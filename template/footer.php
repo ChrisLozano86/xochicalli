@@ -98,7 +98,8 @@
 							<h3>Dirección del negocio</h3>
                             
                                 <ul class="list-time">
-                                    <li> <i class="fas fa-map-marker-alt"></i> Lunes - Viernes: 08.00am to 05.00pm</li> 
+                                    <li> <i class="fas fa-map-marker-alt"></i> Mercado Chamacuero, Local 8<br> 
+                                Morelos 14, Zona Centro, CP 38200 <br> Comonfort, Guanajuato</li> 
                                     <li><i class="fas fa-phone-square"></i> 412 118 5143</li> 
                                     <li> <i class="fas fa-envelope"></i> contacto@xochicalliplus.com</li>
                                 </ul>

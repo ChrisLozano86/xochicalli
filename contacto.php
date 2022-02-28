@@ -11,7 +11,7 @@
                         <h2>CONTACTANOS</h2>
                         <div style="color:black">
                         <p>¿Tienes alguna duda o te interesa alguno de nuestros productos? </p>
-                        <p>Puedes enviarnos un mensaje directo a nuestro Whatsapp haciendo clic en el ícono <img src="images/whatsapp.png" width="50" height="50"></p>
+                        <p>Puedes enviarnos un mensaje directo a nuestro Whatsapp haciendo clic en el ícono <a href="https://api.whatsapp.com/send?phone=524121185143"><img src="images/whatsapp.png" width="50" height="50"></a></p>
                         </div>
                         <!-- <form id="contactForm">
                             <div class="row">
@@ -59,7 +59,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Mercado Chamacuero<br> Comonfort, Guanajuato</p>
+                                <p><i class="fas fa-map-marker-alt"></i>Mercado Chamacuero, Local 8<br> 
+                                Morelos 14, Zona Centro, CP 38200 <br> Comonfort, Guanajuato</p>
                             </li>
                             <li>
                                 <p><i class="fas fa-phone-square"></i>Cel:412 118 5143</p>
