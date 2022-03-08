@@ -4,3 +4,13 @@
     background-color: #25D366; 
     color: white;
 }
+
+.product-image{
+    box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.75);
+}
+
+.star-product-title{
+    font-size: 1.5em;
+}

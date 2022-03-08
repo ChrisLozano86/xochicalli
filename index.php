@@ -70,21 +70,21 @@
                    
                 <div class="shop-cat-box">
                
-                     <img class="img-fluid" src="images/categories_img_01.jpg"/> 
-                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#1">Producto 1 <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
+                     <img class="img-fluid" src="images/sin_imagen.png"/> 
+                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#1"> <span class="star-product-title"> Shampoo Negro </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
                         
                     </div>
                 </div>
                
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
+                        <img class="img-fluid" src="images/sin_imagen.png" alt="" />
                         <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#2">Producto 2 <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
+                        <img class="img-fluid" src="images/sin_imagen.png" alt="" />
                         <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#3">Producto 3 <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a>  
                     </div>
                 </div>
@@ -121,9 +121,10 @@
                     <div class="special-menu text-center">
                         <div class="button-group filter-button-group">
                             <button  class="active" data-filter="*">Todos</button>
-                            <button  data-filter=".top-featured">Categoría 1</button>
-                            <button data-filter=".best-seller">Categoría 2</button>
-                            <button data-filter=".best-seller">Categoría 3</button>
+                            <button  data-filter=".shampoo">Shampoos</button>
+                            <button data-filter=".jabon">Jabones</button>
+                            <button data-filter=".pomadas">Pomadas</button>
+                            <button data-filter=".otros">Otros</button>
                             
                         </div>
                     </div>
@@ -141,7 +142,7 @@
                             <div class="type-lb">
                                 <p class="sale">Título del producto</p>
                             </div>
-                            <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                             
                         </div>
                         <div class="why-text">
@@ -157,7 +158,7 @@
                             <div class="type-lb">
                                 <p class="sale">Título del producto</p>
                             </div>
-                            <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                             
                         </div>
                         <div class="why-text">
@@ -173,7 +174,7 @@
                             <div class="type-lb">
                                 <p class="sale">Título del producto</p>
                             </div>
-                            <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -189,7 +190,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -206,7 +207,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -223,7 +224,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -239,7 +240,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -255,7 +256,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -271,7 +272,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -287,7 +288,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -303,7 +304,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">
@@ -319,7 +320,7 @@
                             <div class="type-lb">
                                 <p class="sale">Titulo del producto</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
                            
                         </div>
                         <div class="why-text">

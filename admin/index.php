@@ -12,11 +12,11 @@ if($_SESSION['idRol']== null){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <!-- Author Meta -->
-	<meta name="author" content="Xochicalli">
+	<meta name="author" content="Xochicalli - Casa de las flores">
 	 <!-- Meta Keyword -->
-	 <meta name="keywords" content="Xochicalli">
+	 <meta name="keywords" content="Xochicalli, casa, flores, productos, artesanales, naturales, shampoos, jabones, pomadas, Comonfort, Guanajuato">
     <!-- Meta Description -->
-    <meta name="description" content="Xochicalli">
+    <meta name="description" content="Xochicalli Casa de las flores, productos 100% artesanales y naturales, hechos orgullosamente en Comonfort, Guanajuato, México">
   <!--Icon-->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
   <title>CPANEL | Xochicalli</title>

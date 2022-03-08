@@ -4,82 +4,55 @@
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
-                    <div class="hov-in">
+                    <img src="images/bottom-slider/romero.jpg" alt="" />
+                    <!-- <div class="hov-in">
                         <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/savila.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/jengibre.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/manzanilla.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><<i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/calendula.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/oro.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/aguacate.webp" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/menta.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/cafe.jpg" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="catalogo_productos.php"><i class="fas fa-search"></i></a>
-                    </div>
+                    <img src="images/bottom-slider/cola_caballo.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -98,7 +71,7 @@
 							<h3>Dirección del negocio</h3>
                             
                                 <ul class="list-time">
-                                    <li> <i class="fas fa-map-marker-alt"></i> Mercado Chamacuero, Local 8<br> 
+                                    <li> <i class="fas fa-map-marker-alt"></i> Mercado Chamacuero, Local 90<br> 
                                 Morelos 14, Zona Centro, CP 38200 <br> Comonfort, Guanajuato</li> 
                                     <li><i class="fas fa-phone-square"></i> 412 118 5143</li> 
                                     <li> <i class="fas fa-envelope"></i> contacto@xochicalliplus.com</li>
@@ -135,8 +108,9 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>Acerca de Xochicalli</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                            <p>Somos una empresa Mexicana dedicada a la creación y distribución de productos artesanales y 100% naturales para el cuidado de tu salud.</p> 
+                            
+							
                         </div>
                     </div>
                   <!--    <div class="col-lg-4 col-md-12 col-sm-12">

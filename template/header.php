@@ -11,8 +11,8 @@
 
     <!-- Site Metas -->
     <title>Xochicalli - Casa de las flores</title>
-    <meta name="keywords" content="xochicalliplus">
-    <meta name="description" content="">
+    <meta name="keywords" content="xochicalli, xochicalliplus, productos, naturales,artesanales, Comonfort, Guanajuato, México">
+    <meta name="description" content="Somos una empresa Mexicana dedicada a la creación y distribución de productos artesanales y 100% naturales para el cuidado de tu salud. Hecho orgullosamente en Comonfort, Guanajuato, México">
     <meta name="author" content="Xochicalliplus">
 
     <!-- Site Icons -->
