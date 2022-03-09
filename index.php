@@ -29,13 +29,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Conoce Xochicalli <br> Casa de las flores</strong></h1>
-                            <p class="m-b-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore ipsam distinctio est! Incidunt maiores <br> neque facere accusamus asperiores itaque magnam saepe molestias animi ipsam amet ab, officia tenetur quae.</p>
+                            <p class="m-b-40">Somos una empresa Mexicana dedicada a la creación y distribución de productos 100% naturales y artesanales para el cuidado de tu salud.</p>
                             <p><a class="btn hvr-hover" href="catalogo_productos.php">Ver Catálogo de productos</a></p>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="text-center">
+            <!-- <li class="text-center">
                 <img src="images/slider4.jpg" alt="">
                 <div class="container">
                     <div class="row">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
         <div class="slides-navigation">
             <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
