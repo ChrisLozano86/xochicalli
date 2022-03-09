@@ -1,54 +1,55 @@
 <?php
-require_once '../../class/Slider.php';
-$idSlider = (isset($_REQUEST['idSlider'])) ? $_REQUEST['idSlider'] : null;
+require_once '../../class/Producto.php';
+$id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
 
-    if($idSlider){        
-        $slider = Slider::buscarPorId($idSlider);   
+    if($id){        
+        $producto = Producto::buscarPorId($id);   
           
     }else{
-        $slider = new Slider(); 
+        $producto = new Producto(); 
        
     }
 
    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-      $titulo = (isset($_POST['titulo'])) ? $_POST['titulo'] : null;
-      $url_imagen1 = (isset($_REQUEST['url_imagen1'])) ? $_REQUEST['url_imagen1'] : null;     
+      $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : null;
+      $url_imagen = (isset($_REQUEST['url_imagen'])) ? $_REQUEST['url_imagen'] : null;     
       $descripcion = (isset($_POST['descripcion'])) ? $_POST['descripcion'] : null;
-      $fecha_publicacion = date('Y-m-d');
-      $visible = (isset($_REQUEST['visible'])) ? $_REQUEST['visible'] : null;
+      $ingredientes = (isset($_REQUEST['ingredientes'])) ? $_REQUEST['ingredientes'] : null;
+      $precio = (isset($_POST['precio'])) ? $_POST['precio'] : null;
      
-            $slider->setTitulo($titulo);
-            $slider->setDescripcion($descripcion);
-            $slider->setFechaPublicacion($fecha_publicacion);
-            $slider->setVisible($visible);
+     
+            $producto->setNombre($titulo);
+            $producto->setDescripcion($descripcion);
+            $producto->setIngredientes($ingredientes);
+            $producto->setPrecio($precio);
            
              
              $rutaServidor = 'uploads/images';
              $rutaServidorFiles = 'uploads/files';
             
              
-            if ($_FILES['url_img1']['name']!=null) {
+            if ($_FILES['url_img']['name']!=null) {
     
                     if (!is_dir('uploads/images')) {
                       mkdir('uploads/images', 0777, true); 
                     }
                    
-                    $rutaTemporal1 = $_FILES['url_img1']['tmp_name'];
-                    $extension = pathinfo($_FILES['url_img1']['name'], PATHINFO_EXTENSION);
-                    $nombreImagen1 = date('YmdHis').'_slider.'.$extension;
-                    $rutaDestino1 = $rutaServidor.'/'.$nombreImagen1;
-                    unlink($url_imagen1);
-                    move_uploaded_file($rutaTemporal1, $rutaDestino1); 
-                    $slider->setUrlImagen1($rutaDestino1); 
+                    $rutaTemporal = $_FILES['url_img']['tmp_name'];
+                    $extension = pathinfo($_FILES['url_img']['name'], PATHINFO_EXTENSION);
+                    $nombreImagen = 'producto_'.date('YmdHis').'.'.$extension;
+                    $rutaDestino = $rutaServidor.'/'.$nombreImagen;
+                    unlink($url_imagen);
+                    move_uploaded_file($rutaTemporal, $rutaDestino); 
+                    $producto->setUrlImagen($rutaDestino); 
                   
               } else{
-              $slider->setUrlImagen1($url_imagen1);    
+              $producto->setUrlImagen($url_imagen);    
             } 
 
             
-              $slider->guardar();
+              $producto->guardar();
               header('Location: index.php');
               
             
@@ -66,11 +67,11 @@ $idSlider = (isset($_REQUEST['idSlider'])) ? $_REQUEST['idSlider'] : null;
           <a href="index.php" class="btn btn-warning">Regresar</a><br>
           
           <?php 
-          if (isset($_REQUEST['idSlider'])){
+          if (isset($_REQUEST['id'])){
             
-            $title = 'Editar elemento del slider ';
+            $title = 'Editar Producto ';
           }else{
-            $title = 'Crear nuevo elemento para slider';
+            $title = 'Crear nuevo Producto';
           }
           ?>
 
@@ -80,48 +81,47 @@ $idSlider = (isset($_REQUEST['idSlider'])) ? $_REQUEST['idSlider'] : null;
           <h4 class="text-center"><?php echo $title ?></h4> <br>
       
 
-            <form action="save.php" method="post" id="slider_form" enctype="multipart/form-data">
+            <form action="save.php" method="post" id="Producto_form" enctype="multipart/form-data">
 
             <div class="form-group">
-            <input class="form-control" type="hidden" name="idSlider" id="idSlider" value="<?php echo $slider->getIdSlider(); ?>">
+            <input class="form-control" type="hidden" name="id" id="id" value="<?php echo $Producto->getId(); ?>">
             </div>
 
             <div class="form-group">
-            <input class="form-control" type="hidden" name="url_imagen1" id="url_imagen1" value="<?php echo $slider->getUrlImagen1(); ?>">
+            <input class="form-control" type="hidden" name="url_imagen" id="url_imagen" value="<?php echo $Producto->getUrlImagen(); ?>">
             </div>
 
 
             <div class="form-group">
             <label for="titulo">Título</label>
-            <input class="form-control" type="text" name="titulo" id="titulo" value="<?php echo $slider->getTitulo(); ?>">
+            <input class="form-control" type="text" name="titulo" id="titulo" value="<?php echo $Producto->getTitulo(); ?>">
             </div>
 
             <div class="form-group">
-            <label for="url_img1">Imagen del slider </label>
-            <?php    if(isset($_REQUEST['idSlider'])): ?>
+            <label for="url_img">Imagen del Producto </label>
+            <?php    if(isset($_REQUEST['id'])): ?>
               </br>
-            <img src="<?= $slider->getUrlImagen1(); ?>" style="width:100px" />
+            <img src="<?= $Producto->getUrlImagen(); ?>" style="width:100px" />
             </br></br>
             <?php endif; ?>
-            <input type="file" class="form-control-file" name="url_img1" id="url_img1" <?php if($slider->getIdSlider()==""){ echo 'required'; }?> >
-            <small> Selecciona una imagen con las siguientes caracteristicas:</small>
-            <ul>
-              <li><small>Dimensiones de 1920 x 790 pixeles en formato JPG o PNG</small></li>
-              <li><small>Tamaño menor a 400kb</small></li>
-            </ul>  
-             
+            <input type="file" class="form-control-file" name="url_img" id="url_img" <?php if($producto->getId()==""){ echo 'required'; }?> >
             </div>
 
             <div class="form-group">
             <label for="contenido">Descripción</label>
-           <textarea class="form-control" name="descripcion" id="descripcion" rows="3" ><?php echo $slider->getDescripcion(); ?></textarea>
+           <textarea class="form-control" name="descripcion" id="descripcion" rows="3" ><?php echo $Producto->getDescripcion(); ?></textarea>
             </div>  
 
             <div class="form-group">
-              <label for="visible">Visible</label>
-            <select name="visible" id="visible" class="form-control" style="width: 50%;">
-              <option value="0" <?php if($slider->getVisible()==0){echo 'selected';}?>>No</option>
-              <option value="1" <?php if($slider->getVisible()==1){echo 'selected';}?>>Sí</option>
+            <label for="contenido">Elaborado con</label>
+           <textarea class="form-control" name="ingredientes" id="ingredientes" rows="3" ><?php echo $Producto->getIngredientes(); ?></textarea>
+            </div>  
+
+            <div class="form-group">
+              <label for="destacado">Destacado</label>
+            <select name="destacado" id="destacado" class="form-control" style="width: 50%;">
+              <option value="no" <?php if($Producto->getDestacado()=='no'){echo 'selected';}?>>No</option>
+              <option value="si" <?php if($Producto->getDestacado()=='si'){echo 'selected';}?>>Sí</option>
             </select> 
             </div>
 

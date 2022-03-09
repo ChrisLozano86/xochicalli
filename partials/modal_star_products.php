@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body" style="color: black;">
-      <img class="img-fluid product-image" src="images/sin_imagen.png" alt="" />
+      <img class="img-fluid product-image" src="images/productos/shampoo_negro.jpg" alt="" />
       <br>
       <br>
       <h2 class="font-weight-bold">Descripción del producto</h2>
@@ -22,7 +22,7 @@
 <br>
       <h3>Precio</h3>
         
-       <p class="font-weight-bold"> $150.00 <br> Presentación en botella de 1L </p>
+       <p class="font-weight-bold"> $180.00 <br> Presentación en botella de 1L </p>
 
         <hr>
        <small class="font-weight-bold">Opiniones de los clientes</small>

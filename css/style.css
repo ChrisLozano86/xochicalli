@@ -675,9 +675,9 @@
 	transition-timing-function: ease-out;
 }
  .hvr-hover:hover::after{
-     -webkit-transform: scale(2);
+      -webkit-transform: scale(2);
 	 transform: scale(2);
-     color: #ffffff;
+     color: #ffffff; 
 }
  .hvr-hover{
 	 overflow: hidden;
@@ -824,7 +824,7 @@
 	transition: all 0.3s ease-in-out 0s;
 }
  .shop-cat-box img{
-     margin: -10px 0 0 -10px;
+    /*  margin: -10px 0 0 -10px;
      max-width: none;
      width: -webkit-calc(100% + 10px);
      width: calc(100% + 10px);
@@ -834,16 +834,16 @@
      -webkit-transform: translate3d(10px,10px,0);
      transform: translate3d(10px,10px,0);
      -webkit-backface-visibility: hidden;
-     backface-visibility: hidden;
+     backface-visibility: hidden; */
 }
  .shop-cat-box:hover img{
-     opacity: 0.6;
+    /*  opacity: 0.6;
      -webkit-transform: translate3d(0,0,0);
-     transform: translate3d(0,0,0);
+     transform: translate3d(0,0,0); */
 }
  .shop-cat-box a{
-     position: absolute;
-     z-index: 2;
+      position: absolute;
+     /*z-index: 2; */
      bottom: 0px;
      left: 0px;
      right: 0;

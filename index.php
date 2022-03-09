@@ -70,7 +70,9 @@
                    
                 <div class="shop-cat-box">
                
-                     <img class="img-fluid" src="images/sin_imagen.png"/> 
+                     <img class="img-fluid" src="images/productos/shampoo_negro.jpg"/> 
+
+                        <br><br><br><br><br>
                         <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#1"> <span class="star-product-title"> Shampoo Negro </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
                         
                     </div>

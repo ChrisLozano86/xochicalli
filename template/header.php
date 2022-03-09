@@ -11,7 +11,7 @@
 
     <!-- Site Metas -->
     <title>Xochicalli - Casa de las flores</title>
-    <meta name="keywords" content="xochicalli, xochicalliplus, productos, naturales,artesanales, Comonfort, Guanajuato, México">
+    <meta name="keywords" content="xochicalli, xochicalliplus, casa, flores productos, naturales,artesanales, Comonfort, Guanajuato, México">
     <meta name="description" content="Somos una empresa Mexicana dedicada a la creación y distribución de productos artesanales y 100% naturales para el cuidado de tu salud. Hecho orgullosamente en Comonfort, Guanajuato, México">
     <meta name="author" content="Xochicalliplus">
 
@@ -43,7 +43,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					
                     <div class="right-phone-box">
-<p>Contactanos &nbsp; <a href="https://api.whatsapp.com/send?phone=524121185143&text=Hola,%20quisiera%20conocer%20m%C3%A1s%20sobre%20tus%20productos"> <i class="fab fa-whatsapp"></i> 412 118 5143 </a></p>
+                        <p>Contactanos &nbsp; <a href="https://api.whatsapp.com/send?phone=524121185143&text=Hola,%20quisiera%20conocer%20m%C3%A1s%20sobre%20tus%20productos"> <i class="fab fa-whatsapp"></i> 412 118 5143 </a></p>
                     </div>
                     <div class="our-link">
                         <ul>
@@ -59,10 +59,10 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
+                                    <i class="fab fa-opencart"></i> Promo 1
                                 </li>
                                 <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
+                                    <i class="fab fa-opencart"></i> Promo 2
                                 </li>
                          
                             </ul>
