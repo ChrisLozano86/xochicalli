@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-03-2022 a las 14:32:14
+-- Tiempo de generación: 09-03-2022 a las 15:42:01
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
-  `url_imagen` varchar(200) NOT NULL,
   `nombre` varchar(50) NOT NULL,
+  `url_imagen` varchar(200) NOT NULL,
   `descripcion` varchar(250) NOT NULL,
   `ingredientes` varchar(250) NOT NULL,
   `precio` decimal(2,0) NOT NULL,
   `presentacion` varchar(100) NOT NULL,
-  `categoria` enum('shampoo','jabon','pomada','otro') NOT NULL,
+  `categoria` enum('shampoos','jabones','pomadas','otros') NOT NULL,
   `destacado` enum('si','no','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

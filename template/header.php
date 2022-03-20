@@ -36,6 +36,11 @@
 </head>
 
 <body>
+<?php
+    require_once 'admin/class/Producto.php';
+    $best_seller = Producto::recuperarDestacados(); 
+    $products = Producto::recuperarTodos();
+    ?>
     <!-- Start Main Top -->
     <div class="main-top">
         <div class="container-fluid">

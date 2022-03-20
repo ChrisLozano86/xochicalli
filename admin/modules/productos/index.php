@@ -26,9 +26,13 @@ include_once '../../assets/template/header.php';
     <tr class="text-center">
     
     <th scope="col">Imagen</th>
-      <th scope="col">Título</th>
-      <th scope="col">Fecha de Publicación</th>
-      <th scope="col">Visible</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Elaborado con</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Presentación</th>
+      <th scope="col">Categoría</th>
+      <th scope="col">Destacado</th>
       <th scope="col">Editar</th>
       <th scope="col">Eliminar</th>
       
@@ -41,10 +45,12 @@ include_once '../../assets/template/header.php';
     <tr>  
       <td> <img src="<?php echo $item['url_imagen']; ?>" class="article-image-thumbnail"></td>
       <td><?php echo $item['nombre']; ?></td>
-      <td><?php  ?></td>
-      <td class="text-center"><?php if($item['visible']==1){ echo '<a href="#" class="btn btn-success fas fa-check-circle lock" alt="Visible"></a>'; }else{ echo '<a href="#" class="btn btn-warning fas fa-pause-circle lock" alt="No Visible"></a>'; } ?></td>
-     
-     
+      <td><?php echo $item['descripcion']; ?></td>
+      <td><?php echo $item['ingredientes']; ?></td>
+      <td><?php echo $item['precio']; ?></td>
+      <td><?php echo $item['presentacion']; ?></td>
+      <td><?php echo $item['categoria']; ?></td>
+      <td><?php echo $item['destacado']; ?></td>
       <td class="text-center"><a href="save.php?id=<?php echo $item[0];?>" class="btn btn-warning far fa-edit"></a></td>
       <td class="text-center"><a href="delete.php?id=<?php echo $item[0];?>" onclick="return confirm('¿Está seguro que desea eliminar este registro?')" class="btn btn-danger far fa-trash-alt"></a></td> 
     </tr>

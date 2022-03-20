@@ -1,13 +1,13 @@
 <?php
     
-     require_once '../../class/Slider.php';
+     require_once '../../class/Producto.php';
   
     
-    $idSlider = (isset($_REQUEST['idSlider'])) ? $_REQUEST['idSlider'] : null;
-    if($idSlider){
-        $slider = Slider::buscarPorId($idSlider);        
-        $slider->eliminar();
-        unlink($slider->getUrlImagen1()); 
+    $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
+    if($id){
+        $producto = Producto::buscarPorId($id);        
+        $producto->eliminar();
+        unlink($producto->getUrlImagen()); 
         header('Location: index.php');
     }else{
         header('Location: index.php');

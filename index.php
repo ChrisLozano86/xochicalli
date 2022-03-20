@@ -55,7 +55,7 @@
     </div>
     <!-- End Slider -->
 
-    <!-- Start Star Products  -->
+    <!-- Best Seller Products  -->
     <div class="categories-shop">
         <div class="container">
             <div class="row">
@@ -65,31 +65,29 @@
                         <p>Conoce nuestros productos estrella</p>
                     </div>
                 </div>
+                <?php 
+                    if(count($best_seller)){
+                    foreach($best_seller as $product){
+                ?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    
-                   
                 <div class="shop-cat-box">
-               
-                     <img class="img-fluid" src="images/productos/shampoo_negro.jpg"/> 
+                     <img class="img-fluid" src="admin/modules/productos/<?php echo $product['url_imagen'];?>"/> 
 
                         <br><br><br><br><br>
-                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#1"> <span class="star-product-title"> Shampoo Negro </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
+                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#product_1"> <span class="star-product-title"> <?php echo $product['nombre'];?> </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
                         
                     </div>
                 </div>
+               <?php
+                    }
+                }else{
+                    echo '<div class="col-12">';
+                    echo '<p class="alert alert-info">No hay productos para mostrar </p>';
+                    echo '</div>';
+                }
+               ?>
                
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/sin_imagen.png" alt="" />
-                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#2">Producto 2 <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/sin_imagen.png" alt="" />
-                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#3">Producto 3 <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a>  
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>
@@ -123,8 +121,8 @@
                     <div class="special-menu text-center">
                         <div class="button-group filter-button-group">
                             <button  class="active" data-filter="*">Todos</button>
-                            <button  data-filter=".shampoo">Shampoos</button>
-                            <button data-filter=".jabon">Jabones</button>
+                            <button  data-filter=".shampoos">Shampoos</button>
+                            <button data-filter=".jabones">Jabones</button>
                             <button data-filter=".pomadas">Pomadas</button>
                             <button data-filter=".otros">Otros</button>
                             
@@ -135,207 +133,40 @@
 
             <div class="row special-list">
 
-            
+            <?php 
+                    if(count($products)>0){
+                    foreach($products as $product){
+                ?>
 
 
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                <div class="col-lg-3 col-md-6 special-grid <?php echo $product['categoria']; ?>">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="sale">Título del producto</p>
+                                <p class="sale"><?php echo $product['nombre']; ?></p>
                             </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
+                            <img src="admin/modules/productos/<?php echo $product['url_imagen'];?>" class="img-fluid" alt="<?php ?>">
                             
                         </div>
-                        <div class="why-text">
-                            <h4>Descripción</h4>
-                            <h5>Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Título del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
+                        <div class="why-text" style="width:100%;">
+                            
+                            <h5 data-toggle="modal" data-target="#product_1">  Ver detalles</h5>
                             
                         </div>
-                        <div class="why-text">
-                            <h4>Descripción</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Título del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripción</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Titulo del producto</p>
-                            </div>
-                            <img src="images/sin_imagen.png" class="img-fluid" alt="Image">
-                           
-                        </div>
-                        <div class="why-text">
-                            <h4>Descripcion</h4>
-                            <h5> Ver detalles</h5>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                }else{
+                    echo '<div class="col-12">';
+                    echo '<p class="alert alert-info">No hay productos para mostrar </p>';
+                    echo '</div>';
+                }
+               ?>
                 
             </div>
         </div>
-
-        
         
     </div>
     <!-- End Products  -->

@@ -18,12 +18,17 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
       $descripcion = (isset($_POST['descripcion'])) ? $_POST['descripcion'] : null;
       $ingredientes = (isset($_REQUEST['ingredientes'])) ? $_REQUEST['ingredientes'] : null;
       $precio = (isset($_POST['precio'])) ? $_POST['precio'] : null;
+      $presentacion = (isset($_POST['presentacion'])) ? $_POST['presentacion'] : null;
+      $categoria = (isset($_POST['categoria'])) ? $_POST['categoria'] : null;
+      $destacado = (isset($_POST['destacado'])) ? $_POST['destacado'] : null;
      
-     
-            $producto->setNombre($titulo);
+            $producto->setNombre($nombre);
             $producto->setDescripcion($descripcion);
             $producto->setIngredientes($ingredientes);
             $producto->setPrecio($precio);
+            $producto->setPresentacion($presentacion);
+            $producto->setCategoria($categoria);
+            $producto->setDestacado($destacado);
            
              
              $rutaServidor = 'uploads/images';
@@ -69,9 +74,9 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
           <?php 
           if (isset($_REQUEST['id'])){
             
-            $title = 'Editar Producto ';
+            $title = 'Editar producto ';
           }else{
-            $title = 'Crear nuevo Producto';
+            $title = 'Crear nuevo producto';
           }
           ?>
 
@@ -84,21 +89,22 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
             <form action="save.php" method="post" id="Producto_form" enctype="multipart/form-data">
 
             <div class="form-group">
-            <input class="form-control" type="hidden" name="id" id="id" value="<?php echo $Producto->getId(); ?>">
+            <input class="form-control" type="hidden" name="id" id="id" value="<?php echo $producto->getId(); ?>">
             </div>
 
             <div class="form-group">
-            <input class="form-control" type="hidden" name="url_imagen" id="url_imagen" value="<?php echo $Producto->getUrlImagen(); ?>">
+            <input class="form-control" type="hidden" name="url_imagen" id="url_imagen" value="<?php echo $producto->getUrlImagen(); ?>">
             </div>
 
 
             <div class="form-group">
-            <label for="titulo">Título</label>
-            <input class="form-control" type="text" name="titulo" id="titulo" value="<?php echo $Producto->getTitulo(); ?>">
+            <label for="titulo">Nombre del producto</label>
+            <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $producto->getNombre(); ?>">
             </div>
 
             <div class="form-group">
-            <label for="url_img">Imagen del Producto </label>
+            <label for="url_img">Imagen 
+               </label>
             <?php    if(isset($_REQUEST['id'])): ?>
               </br>
             <img src="<?= $Producto->getUrlImagen(); ?>" style="width:100px" />
@@ -109,25 +115,46 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
 
             <div class="form-group">
             <label for="contenido">Descripción</label>
-           <textarea class="form-control" name="descripcion" id="descripcion" rows="3" ><?php echo $Producto->getDescripcion(); ?></textarea>
+           <textarea class="form-control" name="descripcion" id="descripcion" rows="3" ><?php echo $producto->getDescripcion(); ?></textarea>
             </div>  
 
             <div class="form-group">
             <label for="contenido">Elaborado con</label>
-           <textarea class="form-control" name="ingredientes" id="ingredientes" rows="3" ><?php echo $Producto->getIngredientes(); ?></textarea>
+           <textarea class="form-control" name="ingredientes" id="ingredientes" rows="3" ><?php echo $producto->getIngredientes(); ?></textarea>
             </div>  
+
+            <div class="form-group">
+            <label for="precio">Precio $</label>
+            <input class="form-control" type="number" min="0" max="9999" name="precio" id="precio" placeholder="0" value="<?php echo $producto->getPrecio(); ?>" style="width: 10%;">
+            </div>
+
+            
+            <div class="form-group">
+            <label for="precio">Presentación</label>
+            <input class="form-control" type="text" name="presentacion" id="presentacion" placeholder="Ejemplo Botella de 1L" value="<?php echo $producto->getPresentacion(); ?>">
+            </div>
+
+            <div class="form-group">
+              <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria" class="form-control" style="width: 50%;">
+              <option value="shampoos" <?php if($producto->getCategoria()=='shampoos'){echo 'selected';}?>>Shampoos</option>
+              <option value="jabones" <?php if($producto->getCategoria()=='jabones'){echo 'selected';}?>>Jabones</option>
+              <option value="pomadas" <?php if($producto->getCategoria()=='pomadas'){echo 'selected';}?>>Pomadas</option>
+              <option value="otros" <?php if($producto->getDestacado()=='otros'){echo 'selected';}?>>Otros</option>
+            </select> 
+            </div>
 
             <div class="form-group">
               <label for="destacado">Destacado</label>
             <select name="destacado" id="destacado" class="form-control" style="width: 50%;">
-              <option value="no" <?php if($Producto->getDestacado()=='no'){echo 'selected';}?>>No</option>
-              <option value="si" <?php if($Producto->getDestacado()=='si'){echo 'selected';}?>>Sí</option>
+              <option value="no" <?php if($producto->getDestacado()=='no'){echo 'selected';}?>>No</option>
+              <option value="si" <?php if($producto->getDestacado()=='si'){echo 'selected';}?>>Sí</option>
             </select> 
             </div>
 
 
             <div class="form-group">
-            <input type="submit" class="btn btn-default btn-custom" value="Guardar">
+            <input type="submit" class="btn btn-primary" value="Guardar productos">
             </div>  
            
             </form>
@@ -136,6 +163,7 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
           </div>
           </div>
           <!-- /.col -->
+        </div>
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->

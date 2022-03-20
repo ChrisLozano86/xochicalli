@@ -4,8 +4,8 @@ require_once 'Conexion.php';
 class Producto {
 
     private $id;
-    private $url_imagen;
     private $nombre;
+    private $url_imagen;
     private $descripcion;
     private $ingredientes;
     private $precio;
@@ -16,15 +16,14 @@ class Producto {
     
     
 
-    const TABLA = 'slider';
+    const TABLA = 'productos';
     
   
     
-    public function __construct( $url_imagen=null, $nombre=null, $descripcion=null, $ingredientes=null, $precio=null, $presentacion=null, $categoria=null, $destacado=null, $id=null) {
+    public function __construct($nombre=null, $url_imagen=null,  $descripcion=null, $ingredientes=null, $precio=null, $presentacion=null, $categoria=null, $destacado=null, $id=null) {
        
-        
-        $this->url_imagen = $url_imagen;
         $this->nombre = $nombre;
+        $this->url_imagen = $url_imagen;
         $this->descripcion = $descripcion;
         $this->ingredientes = $ingredientes;
         $this->precio = $precio;
@@ -105,27 +104,37 @@ class Producto {
         $this->categoria = $categoria;
     }
 
+    public function setDestacado($destacado) {
+        $this->destacado = $destacado;
+    }
+
 
   
 
     public function guardar() {
         $conexion = new Conexion();
         if($this->id)/*UPDATE*/{
-            $consulta = $conexion->prepare('UPDATE ' . self::TABLA . ' SET  url_imagen = :url_imagen, nombre = :nombre, descripcion = :descripcion, ingredientes = :ingredientes, precio = :precio WHERE id = :id');
-            $consulta->bindParam(':id', $this->id);         
+            $consulta = $conexion->prepare('UPDATE ' . self::TABLA . ' SET  nombre = :nombre, url_imagen = :url_imagen,  descripcion = :descripcion, ingredientes = :ingredientes, precio = :precio, presentacion = :presentacion, categoria = :categoria, destacado = :destacado WHERE id = :id');
+            $consulta->bindParam(':id', $this->id);
+            $consulta->bindParam(':nombre', $this->nombre);         
             $consulta->bindParam(':url_imagen', $this->url_imagen);
-            $consulta->bindParam(':nombre', $this->nombre);
             $consulta->bindParam(':descripcion', $this->descripcion); 
             $consulta->bindParam(':ingredientes', $this->ingredientes);             
             $consulta->bindParam(':precio', $this->precio);   
+            $consulta->bindParam(':presentacion', $this->presentacion);  
+            $consulta->bindParam(':categoria', $this->categoria);  
+            $consulta->bindParam(':destacado', $this->destacado);  
             $consulta->execute();
         }else /*Insert*/{
-            $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA . ' (url_imagen, nombre, descripcion, ingredientes, precio) VALUES (:url_imagen, :nombre,  :descripcion, :ingredientes, :precio)');
+            $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA . ' (nombre, url_imagen, descripcion, ingredientes, precio, presentacion, categoria, destacado) VALUES (:nombre, :url_imagen, :descripcion, :ingredientes, :precio, :presentacion, :categoria, :destacado)');
+            $consulta->bindParam(':nombre', $this->nombre);         
             $consulta->bindParam(':url_imagen', $this->url_imagen);
-            $consulta->bindParam(':nombre', $this->nombre);
             $consulta->bindParam(':descripcion', $this->descripcion); 
             $consulta->bindParam(':ingredientes', $this->ingredientes);             
             $consulta->bindParam(':precio', $this->precio);   
+            $consulta->bindParam(':presentacion', $this->presentacion);  
+            $consulta->bindParam(':categoria', $this->categoria);  
+            $consulta->bindParam(':destacado', $this->destacado);  
             //var_dump($consulta);
             if($consulta->execute()){
                 $this->id = $conexion->lastInsertId();
@@ -161,7 +170,7 @@ class Producto {
         $conexion = null;
         if ($registro) {
            
-            return new self($registro['url_imagen'], $registro['nombre'], $registro['descripcion'],  $registro['ingredientes'], $registro['precio'], $registro['id']);
+            return new self($registro['nombre'], $registro['url_imagen'], $registro['descripcion'],  $registro['ingredientes'], $registro['precio'], $registro['presentacion'], $registro['categoria'], $registro['destacado'], $registro['id']);
             
         } else {
             return false;
@@ -181,9 +190,9 @@ class Producto {
         return $registros;
     }
 
-    public static function recuperarPublicados() {
+    public static function recuperarDestacados() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM slider WHERE precio = 1 ORDER BY id DESC');
+        $consulta = $conexion->prepare('SELECT * FROM productos WHERE destacado = "si" ORDER BY id DESC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
