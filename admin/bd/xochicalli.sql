@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-03-2022 a las 15:42:01
+-- Tiempo de generación: 21-03-2022 a las 19:20:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -33,7 +33,7 @@ CREATE TABLE `productos` (
   `url_imagen` varchar(200) NOT NULL,
   `descripcion` varchar(250) NOT NULL,
   `ingredientes` varchar(250) NOT NULL,
-  `precio` decimal(2,0) NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
   `presentacion` varchar(100) NOT NULL,
   `categoria` enum('shampoos','jabones','pomadas','otros') NOT NULL,
   `destacado` enum('si','no','','') NOT NULL
