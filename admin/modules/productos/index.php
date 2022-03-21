@@ -43,7 +43,7 @@ include_once '../../assets/template/header.php';
 
  
     <tr>  
-      <td> <img src="<?php echo $item['url_imagen']; ?>" width="150" height="150"></td>
+      <td> <img src="<?php echo $item['url_imagen']; ?>" width="120" height="150"></td>
       <td><?php echo $item['nombre']; ?></td>
       <td><?php echo $item['descripcion']; ?></td>
       <td><?php echo $item['ingredientes']; ?></td>
