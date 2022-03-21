@@ -1,6 +1,6 @@
 <?php
 require_once '../../class/Producto.php';
-$productos = Producto::recuperarTodos(); 
+$productos = Producto::recuperarTodosAdmin(); 
 include_once '../../assets/template/header.php';
 ?>
 

@@ -182,7 +182,17 @@ class Producto {
 
     public static function recuperarTodos() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA. '  ORDER BY id ASC');
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA. ' WHERE publicado = "si" ORDER BY id ASC');
+        $consulta->execute();
+        $registros = $consulta->fetchAll();
+  
+        $conexion = null;
+        return $registros;
+    }
+
+    public static function recuperarTodosAdmin() {
+        $conexion = new Conexion();
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA. ' ORDER BY id ASC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
@@ -192,7 +202,7 @@ class Producto {
 
     public static function recuperarDestacados() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM productos WHERE destacado = "si" ORDER BY id ASC');
+        $consulta = $conexion->prepare('SELECT * FROM productos WHERE publicado = "si" AND destacado = "si" ORDER BY id ASC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
