@@ -107,7 +107,7 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
                </label>
             <?php    if(isset($_REQUEST['id'])): ?>
               </br>
-            <img src="<?= $Producto->getUrlImagen(); ?>" style="width:100px" />
+            <img src="<?= $producto->getUrlImagen(); ?>" style="width:100px" />
             </br></br>
             <?php endif; ?>
             <input type="file" class="form-control-file" name="url_img" id="url_img" <?php if($producto->getId()==""){ echo 'required'; }?> >
@@ -140,7 +140,7 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
               <option value="shampoos" <?php if($producto->getCategoria()=='shampoos'){echo 'selected';}?>>Shampoos</option>
               <option value="jabones" <?php if($producto->getCategoria()=='jabones'){echo 'selected';}?>>Jabones</option>
               <option value="pomadas" <?php if($producto->getCategoria()=='pomadas'){echo 'selected';}?>>Pomadas</option>
-              <option value="otros" <?php if($producto->getDestacado()=='otros'){echo 'selected';}?>>Otros</option>
+              <option value="otros" <?php if($producto->getCategoria()=='otros'){echo 'selected';}?>>Otros</option>
             </select> 
             </div>
 
@@ -149,6 +149,14 @@ $id = (isset($_REQUEST['id'])) ? $_REQUEST['id'] : null;
             <select name="destacado" id="destacado" class="form-control" style="width: 50%;">
               <option value="no" <?php if($producto->getDestacado()=='no'){echo 'selected';}?>>No</option>
               <option value="si" <?php if($producto->getDestacado()=='si'){echo 'selected';}?>>Sí</option>
+            </select> 
+            </div>
+
+            <div class="form-group">
+              <label for="publicado">Publicado</label>
+            <select name="publicado" id="publicado" class="form-control" style="width: 50%;">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
             </select> 
             </div>
 

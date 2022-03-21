@@ -182,7 +182,7 @@ class Producto {
 
     public static function recuperarTodos() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA. '  ORDER BY id DESC');
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA. '  ORDER BY id ASC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
@@ -192,7 +192,7 @@ class Producto {
 
     public static function recuperarDestacados() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM productos WHERE destacado = "si" ORDER BY id DESC');
+        $consulta = $conexion->prepare('SELECT * FROM productos WHERE destacado = "si" ORDER BY id ASC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
