@@ -45,10 +45,10 @@ if($_SESSION['idRol']== null){
         <a href="https://analytics.google.com/analytics/web" target="_blank" class="nav-link">Analytics</a>
       </li> -->
 
-      <li class="nav-item d-none d-sm-inline-block">
+     <!--  <li class="nav-item d-none d-sm-inline-block">
         <a href="https://webmail.hostinger.mx" target="_blank" class="nav-link">Webmail</a>
       </li>
-
+ -->
      <!--  <li class="nav-item d-none d-sm-inline-block">
         <a href="https://console.indigitall.com/" target="_blank" class="nav-link">Configuración Push</a>
       </li> -->

@@ -74,7 +74,7 @@
                      <img class="img-fluid" src="admin/modules/productos/<?php echo $product['url_imagen'];?>"/> 
 
                         <br><br><br><br><br>
-                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#product_1"> <span class="star-product-title"> <?php echo $product['nombre'];?> </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
+                        <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#product_<?php echo $product["id"]?>"> <span class="star-product-title"> <?php echo $product['nombre'];?> </span>   <br> Ver más detalles &nbsp; <i class="fas fa-search-plus"></i></i></a> 
                         
                     </div>
                 </div>
@@ -93,11 +93,6 @@
     </div>
 
         <!-- Modal Star Products -->
-
-        <?php
-        
-        include_once("partials/modal_star_products.php");
-        ?>
 
 
 
@@ -150,13 +145,14 @@
                         </div>
                         <div class="why-text" style="width:100%;">
                             
-                            <h5 data-toggle="modal" data-target="#product_1">  Ver detalles</h5>
+                            <h5 data-toggle="modal" data-target="#product_<?php echo $product["id"] ?>" class="btn-detail">  Ver detalles</h5>
                             
                         </div>
                     </div>
                 </div>
 
                 <?php
+                 include_once("partials/modal_products.php");
                     }
                 }else{
                     echo '<div class="col-12">';

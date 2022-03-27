@@ -14,3 +14,7 @@
 .star-product-title{
     font-size: 1.5em;
 }
+
+.btn-detail:hover{
+    cursor: pointer;
+}

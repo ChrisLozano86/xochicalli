@@ -33,6 +33,7 @@ include_once '../../assets/template/header.php';
       <th scope="col">Presentación</th>
       <th scope="col">Categoría</th>
       <th scope="col">Destacado</th>
+      <th scope="col">Publicado</th>
       <th scope="col">Editar</th>
       <th scope="col">Eliminar</th>
       
@@ -51,6 +52,7 @@ include_once '../../assets/template/header.php';
       <td><?php echo $item['presentacion']; ?></td>
       <td><?php echo $item['categoria']; ?></td>
       <td><?php echo $item['destacado']; ?></td>
+      <td><?php //echo $item['destacado']; ?>si</td>
       <td class="text-center"><a href="save.php?id=<?php echo $item[0];?>" class="btn btn-warning far fa-edit"></a></td>
       <td class="text-center"><a href="delete.php?id=<?php echo $item[0];?>" onclick="return confirm('¿Está seguro que desea eliminar este registro?')" class="btn btn-danger far fa-trash-alt"></a></td> 
     </tr>
