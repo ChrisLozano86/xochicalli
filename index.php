@@ -145,7 +145,7 @@
                         </div>
                         <div class="why-text" style="width:100%;">
                             
-                            <h5 data-toggle="modal" data-target="#product_<?php echo $product["id"] ?>" class="btn-detail">  Ver detalles</h5>
+                            <h5 data-toggle="modal" data-target="#product_<?php echo $product["id"] ?>" class="btn-detail">  Ver más detalles <i class="fas fa-search-plus"></i></h5>
                             
                         </div>
                     </div>
