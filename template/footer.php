@@ -85,9 +85,9 @@
 							<h3>Horario</h3>
 							
                             <ul class="list-time">
-                                    <li>  Lunes - Viernes: 08.00am to 05.00pm</li> 
-                                    <li> Sábado: 10.00am to 08.00pm</li> 
-                                    <li>  Domingo: <span>Cerrado</span></li>
+                                    <li>  Lunes - Viernes: 10:00am to 3:00pm</li> 
+                                    <li> Sábado: Cerrado</li> 
+                                    <li>  Domingo: <span>10:00am to 3:00pm</span></li>
                                 </ul>
 						</div>
 					</div>

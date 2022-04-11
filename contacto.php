@@ -63,7 +63,7 @@
                         <p>A continuación te proporcionamos la dirección de nuestro negocio si deseas visitarnos. </p>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Mercado Chamacuero, Local 90<br> 
+                                <p><i class="fas fa-map-marker-alt"></i>Mercado Chamacuero, Local 38<br> 
                                 Morelos 14, Zona Centro, CP 38200 <br> Comonfort, Guanajuato</p>
                             </li>
                             <li>
@@ -73,6 +73,14 @@
                                 <p><i class="fas fa-envelope"></i>Correo electrónico: xochicalli.gms@gmail.com </p>
                             </li>
                         </ul>
+
+                        <h3 style="color:white;">Horario</h3>
+
+                        <ul>
+                                    <li>  Lunes - Viernes: 10:00am to 3:00pm</li> 
+                                    <li> Sábado: Cerrado</li> 
+                                    <li>  Domingo: <span>10:00am to 3:00pm</span></li>
+                                </ul>
                     </div>
                 </div>
             </div>
