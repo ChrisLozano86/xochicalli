@@ -66,7 +66,7 @@ th, td {
           <tr>
                 
                 <td><?php echo $item['nombre'];  ?></td>
-                <td align="justify"><?php echo $item['descripcion'];  ?> </p></td>
+                <td style="text-align: justify;"><?php echo $item['descripcion'];  ?> </p></td>
                 <td>$<?php echo $item['precio'];  ?></td>
                 <td><?php echo $item['presentacion'];  ?></td>
 
