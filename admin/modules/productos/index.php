@@ -12,11 +12,12 @@ include_once '../../assets/template/header.php';
             <h3 class="text-center"> Administrar Productos </h3>
             
               <a href="save.php" class="btn btn-default btn-custom" > <i class="fas fa-plus"></i> Agregar nuevo producto </a><br><br>
+              <a href="report.php" class="btn btn-default btn-custom" tar> <i class="fas fa-plus"></i> Generar PDF del catálogo </a><br><br>
 
               <br>
 
               <?php  
-              $slider = [];
+              
               if (count($productos) > 0): ?>
 
               <hr>

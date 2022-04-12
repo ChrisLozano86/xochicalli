@@ -42,7 +42,7 @@
                             <div class="type-lb">
                                 <p class="sale"><?php echo $product['nombre']; ?></p>
                             </div>
-                            <img src="admin/modules/productos/<?php echo $product['url_imagen'];?>" class="img-fluid" alt="<?php ?>">
+                            <img src="admin/modules/productos/<?php echo $product['url_imagen'];?>" class="img-fluid"  alt="<?php echo $product['nombre'];?>">
                             
                         </div>
                         <div class="why-text" style="width:100%;">
