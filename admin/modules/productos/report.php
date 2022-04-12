@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-require_once '../../class/Producto.php.php';
+require_once '../../class/Producto.php';
 $productos = Producto::recuperarTodos();
 ?>
 
@@ -107,7 +107,7 @@ th, td {
 
 
 <?php
-/* // Cargamos la librería dompdf que hemos instalado en la carpeta dompdf
+// Cargamos la librería dompdf que hemos instalado en la carpeta dompdf
 require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 
@@ -132,4 +132,3 @@ $filename = 'reporte_'.date('d-m-Y');
 // Enviamos el fichero PDF al navegador.
 $pdf->stream($filename);
 
- */
