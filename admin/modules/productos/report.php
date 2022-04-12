@@ -40,7 +40,7 @@ th, td {
 
 		
 
-		<h3 style="background-color: #76016d; text-align: center; width: 100%; color: white;">Catálogo productos  </h3>
+		<h3 style="background-color: #76016d; text-align: center; width: 100%; color: white;">Catálogo de productos  </h3>
 		
 
 			<table  style="width:100%; font-size: 14px;" >
