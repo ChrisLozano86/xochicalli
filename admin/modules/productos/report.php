@@ -40,7 +40,7 @@ th, td {
 
 		
 
-		<h3 style="background-color: #3e9f8f; text-align: center; width: 100%; color: white;">Catálogo productos  </h3>
+		<h3 style="background-color: #76016d; text-align: center; width: 100%; color: white;">Catálogo productos  </h3>
 		
 
 			<table  style="width:100%; font-size: 14px;" >
@@ -67,7 +67,7 @@ th, td {
                 
                 <td><?php echo $item['nombre'];  ?></td>
                 <td><?php echo $item['descripcion'];  ?></td>
-                <td><?php echo $item['precio'];  ?></td>
+                <td>$<?php echo $item['precio'];  ?></td>
                 <td><?php echo $item['presentacion'];  ?></td>
 
           
@@ -90,6 +90,7 @@ th, td {
 
 
 	<div id="footer">
+
 	
 	</div>
 
