@@ -128,7 +128,7 @@ $pdf->render();
 
 //Nombre del archivo
 
-$filename = 'reporte_'.date('d-m-Y');
+$filename = 'Productos_Xochicalli_'.date('d-m-Y');
  
 // Enviamos el fichero PDF al navegador.
 $pdf->stream($filename);
