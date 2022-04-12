@@ -47,7 +47,7 @@ th, td {
               <thead>
               <tr>
               <th>Producto</th>    
-			  <th>Descripción</th>  
+			        <th>Descripción</th>  
               <th>Precio</th>  
               <th>Presentación</th>  
 
@@ -66,7 +66,7 @@ th, td {
           <tr>
                 
                 <td><?php echo $item['nombre'];  ?></td>
-                <td><?php echo $item['descripcion'];  ?></td>
+                <td class="text-justify"><?php echo $item['descripcion'];  ?></td>
                 <td>$<?php echo $item['precio'];  ?></td>
                 <td><?php echo $item['presentacion'];  ?></td>
 
